@@ -1,21 +1,75 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "tailwindcss-motion";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme inline {
+  --font-sans: var(--font-inter-tight);
+  --font-display: var(--font-spacer-r);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@theme {
+  /* COLORS */
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-*: initial;
+
+  --color-blue-1: #f4f4f6;
+  --color-blue-2: #ecf0f8;
+  --color-blue-3: #e0e8f9;
+  --color-blue-4: #cfdfff;
+  --color-blue-5: #bcd4ff;
+  --color-blue-6: #a5c6ff;
+  --color-blue-7: #8cb2ff;
+  --color-blue-8: #6997ff;
+  --color-blue-9: #0f3bfe;
+  --color-blue-10: #0c33db;
+  --color-blue-11: #123ee5;
+  --color-blue-12: #10296f;
+
+  --color-blue-a1: #3838b804;
+  --color-blue-a2: #a0c0ff20;
+  --color-blue-a3: #9cbcff40;
+  --color-blue-a4: #cfdfff;
+  --color-blue-a5: #bcd4ff;
+  --color-blue-a6: #a5c6ff;
+  --color-blue-a7: #8cb2ff;
+  --color-blue-a8: #6997ff;
+  --color-blue-a9: #0021ffe0;
+  --color-blue-a10: #0029d9f3;
+  --color-blue-a11: #0130e4ed;
+  --color-blue-a12: #011c66ef;
+
+  --color-blue-contrast: #fff;
+  --color-blue-surface: #eaeff9cc;
+  --color-blue-indicator: #0f3bfe;
+  --color-blue-track: #0f3bfe;
+
+  --color-gray-1: #f3f4f4;
+  --color-gray-2: #efefef;
+  --color-gray-3: #e6e6e6;
+  --color-gray-4: #dddedd;
+  --color-gray-5: #d5d6d6;
+  --color-gray-6: #cdcecd;
+  --color-gray-7: #c1c2c2;
+  --color-gray-8: #aeafaf;
+  --color-gray-9: #7f8180;
+  --color-gray-10: #757776;
+  --color-gray-11: #585959;
+  --color-gray-12: #1e201f;
+
+  --color-gray-a1: #2c5f5f05;
+  --color-gray-a2: #00000008;
+  --color-gray-a3: #00000012;
+  --color-gray-a4: #020b021b;
+  --color-gray-a5: #070e0e24;
+  --color-gray-a6: #040a042c;
+  --color-gray-a7: #02060638;
+  --color-gray-a8: #0306064c;
+  --color-gray-a9: #0105037c;
+  --color-gray-a10: #02060487;
+  --color-gray-a11: #020303a5;
+  --color-gray-a12: #010302e1;
+
+  --color-gray-contrast: #ffffff;
+  --color-gray-surface: #ffffffcc;
+  --color-gray-indicator: #7f8180;
+  --color-gray-track: #7f8180;
 }
