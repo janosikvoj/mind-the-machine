@@ -8,7 +8,7 @@ interface TimelineProps {
 
 const Timeline: React.FC<TimelineProps> = ({ isExpanded }) => {
   return (
-    <ul className="w-full flex items-center">
+    <ul className="w-full flex flex-row items-center">
       {seasonsData.seasons.map((season, i) => (
         <TimelineSeasonEntry
           isExpanded={isExpanded}

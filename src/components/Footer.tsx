@@ -1,15 +1,12 @@
 import React from 'react';
-import DashedDivider from './DashedDivider';
+import DashedDivider from './ui/DashedDivider';
 
 const Footer = () => {
   return (
     <footer className="bg-blue-4">
-      <DashedDivider
-        className="stroke-blue-7 border-blue-7 bg-blue-4 border-b"
-        lines={32}
-      />
+      <DashedDivider className="stroke-blue-7 border-blue-7 bg-blue-4 border-b" />
       <div className="overflow-hidden">
-        <div className="flex flex-row absolute p-1.5">
+        <div className="flex flex-row sm:absolute p-1.5">
           <svg
             className="fill-gray-12 w-auto h-6 align-text-top -mb-px"
             viewBox="0 0 300 600"
@@ -45,10 +42,7 @@ const Footer = () => {
           />
         </svg>
       </div>
-      <DashedDivider
-        className="stroke-blue-7 border-blue-7 bg-blue-4 border-t"
-        lines={32}
-      />
+      <DashedDivider className="stroke-blue-7 border-blue-7 bg-blue-4 border-t" />
     </footer>
   );
 };

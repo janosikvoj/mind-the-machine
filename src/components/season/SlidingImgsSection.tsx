@@ -16,7 +16,7 @@ const SlidingImgsSection = () => {
 
   return (
     <section className="border-b border-gray-7 bg-blue-3">
-      <div ref={ref} className="relative h-[32rem] flex flex-row">
+      <div ref={ref} className="relative h-[50vw] flex flex-row">
         <motion.div
           style={{ width: width }}
           transition={{ duration: 0.1, ease: 'easeInOut' }}
@@ -38,8 +38,10 @@ const SlidingImgsSection = () => {
           />
         </div>
       </div>
-      <div className="grid grid-cols-3 p-6 text-balance">
-        <p className="text-sm">{leftImg.description}</p>
+      <div className="space-y-3 sm:space-y-0 sm:grid grid-cols-3 p-6 text-balance">
+        <p className="text-sm sm:border-0 border-r border-gray-9">
+          {leftImg.description}
+        </p>
         <p className="col-start-3 text-sm text-right">{rightImg.description}</p>
       </div>
     </section>

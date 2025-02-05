@@ -8,7 +8,7 @@ import SlidingImgsSection from './SlidingImgsSection';
 import BigNumberSection from './BigNumberSection';
 import DevelopmentsSection from './developmentsSection/DevelopmentsSection';
 import LimitationsSection from './LimitationsSection';
-import ApplicationsSection from './ApplicationsSection/ApplicationsSection';
+import ApplicationsSection from './applicationsSection/ApplicationsSection';
 
 interface SeasonProps {
   season: SeasonType;

@@ -6,6 +6,21 @@
   --font-display: var(--font-spacer-r);
 }
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply antialiased bg-gray-2 font-sans text-gray-12 selection:bg-blue-5 text-pretty;
+  }
+  p {
+    @apply max-w-[75ch] text-pretty;
+  }
+  *:focus-visible {
+    @apply outline-offset-2 outline-2 outline-blue-10 outline-dashed;
+  }
+}
+
 @theme {
   /* COLORS */
 

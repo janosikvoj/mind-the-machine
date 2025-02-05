@@ -1,7 +1,7 @@
 import { ApplicationType } from '@/data/seasons';
 import { circIn, motion, useScroll, useTransform } from 'motion/react';
 import Image from 'next/image';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 
 interface ApplicationItemProps {
   application: ApplicationType;
@@ -24,35 +24,24 @@ const ApplicationItem: React.FC<ApplicationItemProps> = ({
     ease: circIn,
   });
 
-  const h3Ref = useRef<HTMLHeadingElement>(null);
-  const [h3Height, setH3Height] = useState(0);
-
-  useEffect(() => {
-    if (h3Ref.current) {
-      setH3Height(h3Ref.current.offsetHeight);
-    }
-  }, []);
-
-  const topOffset = initialTopOffset;
-
   return (
     <li
-      className="sticky bg-gray-3 border-t border-gray-7 grid grid-cols-7"
-      style={{ top: (topOffset || 0) + index * h3Height }}
+      className="sticky bg-gray-3 border-t border-gray-7 sm:grid grid-cols-7"
+      style={{ top: (initialTopOffset || 0) + index * 80 }}
     >
       <div className="col-start-2 col-span-5 border-x border-gray-7">
-        <h3 ref={h3Ref} className="block text-2xl font-semibold p-6">
-          {title}
-        </h3>
+        <h3 className="block text-2xl font-semibold p-6">{title}</h3>
         <p className="text-sm p-6 pb-3">{description}</p>
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-b to-gray-a9 z-10" />
           <div className="relative overflow-hidden" ref={scrollRef}>
-            <motion.div style={{ scale: scale }}>
+            <motion.div
+              style={{ scale: scale }}
+              className="h-[20vw] min-h-[33vh]"
+            >
               <Image
-                className="bg-gray-9 w-full"
-                width={1340}
-                height={384}
+                className="bg-gray-9 object-cover"
+                fill
                 src={image.src}
                 alt={image.alt}
               />

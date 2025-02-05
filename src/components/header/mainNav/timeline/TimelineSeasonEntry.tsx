@@ -47,7 +47,9 @@ const TimelineSeasonEntry: React.FC<TimelineSeasonEntryProps> = ({
   return (
     <li
       className="relative decoration-0"
-      style={{ width: entryRelativeDuration + '%' }}
+      style={{
+        width: entryRelativeDuration + '%',
+      }}
     >
       <div
         className={cn(
@@ -81,6 +83,7 @@ const TimelineSeasonEntry: React.FC<TimelineSeasonEntryProps> = ({
         </div>
       </div>
       <Link
+        prefetch={true}
         href={'/seasons/' + season.slug}
         scroll={false}
         className={cn(

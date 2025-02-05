@@ -3,6 +3,7 @@ import { seasonContext } from './seasonContext';
 import { LimitationType } from '@/data/seasons';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'motion/react';
+import AnchoredHGroup from '../ui/AnchoredHGroup';
 
 interface LimitationsAccordionItemProps {
   limitation: LimitationType;
@@ -103,12 +104,7 @@ const LimitationsSection = () => {
   if (limitationsSection)
     return (
       <section className="border-b border-gray-7">
-        <hgroup className="px-6 pt-32 pb-20 text-center break-words">
-          <h2 className="text-5xl font-display leading-8 text-gray-11">
-            Limitations
-          </h2>
-          <p className="mt-1.5 text-sm text-gray-11 uppercase">—Limitations—</p>
-        </hgroup>
+        <AnchoredHGroup className="text-gray-11">Limitations</AnchoredHGroup>
         <ol>
           {limitationsSection.map((limitation, index) => (
             <LimitationsAccordionItem
@@ -117,6 +113,9 @@ const LimitationsSection = () => {
               index={index}
             />
           ))}
+          <li className="border-t border-gray-7 grid grid-cols-7">
+            <div className="col-start-2 col-span-5 border-gray-7 border-x h-24" />
+          </li>
         </ol>
       </section>
     );

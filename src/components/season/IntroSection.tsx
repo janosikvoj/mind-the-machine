@@ -6,10 +6,10 @@ const IntroSection = () => {
   const { duration, title, slug, overview, tailwindBgColorClasses } =
     useContext(seasonContext);
   return (
-    <section className="p-6 pb-16 grid grid-cols-7 border-b border-gray-7">
+    <section className="p-6 pb-16 md:grid grid-cols-7 border-b border-gray-7">
       <svg
         className={cn(
-          'col-span-2 m-auto h-1/3 w-1/2 stroke-2',
+          'hidden md:block col-span-2 m-auto h-1/3 w-1/2 stroke-2',
           tailwindBgColorClasses.stroke
         )}
         width={64}
@@ -26,7 +26,7 @@ const IntroSection = () => {
           <p className="text-4xl mb-4">
             {duration.start}–{duration.end}
           </p>
-          <h1 className="mt-4 text-8xl font-display text-blue-11 leading-16">
+          <h1 className="mt-4 text-7xl lg:text-8xl font-display text-blue-11 leading-12 lg:leading-16">
             {title}
           </h1>
           <p className="text-sm text-gray-11">—{slug.toUpperCase()}—</p>
@@ -35,7 +35,7 @@ const IntroSection = () => {
       </div>
       <svg
         className={cn(
-          'col-span-2 m-auto h-1/3 w-1/2 stroke-2',
+          'hidden md:block col-span-2 m-auto h-1/3 w-1/2 stroke-2',
           tailwindBgColorClasses.stroke
         )}
         width={64}
