@@ -11,8 +11,8 @@ const MainNav = () => {
     <div className="relative grow">
       <nav
         className={cn(
-          'h-full flex items-center px-0 transition-all ease-in-out duration-1000 overflow-hidden',
-          isExpanded && 'px-10'
+          'h-full flex items-center justify-center px-0 transition-all ease-in-out duration-1000 overflow-hidden',
+          isExpanded && 'p-10'
         )}
       >
         <Timeline isExpanded={isExpanded} />
@@ -21,7 +21,7 @@ const MainNav = () => {
         <figure className="relative h-full">
           <div
             className={cn(
-              'absolute inset-0 -translate-x-2 overflow-hidden',
+              'absolute inset-0 -translate-x-2 overflow-hidden transition-all duration-1000',
               isExpanded && 'inset-4'
             )}
           >

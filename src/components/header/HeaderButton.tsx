@@ -5,9 +5,19 @@ import { cn } from '@/lib/utils';
 const HeaderButton = () => {
   const { isExpanded, setIsExpanded } = useContext(headerExpandedContext);
   return (
-    <div className="relative bg-gray-3 hover:bg-gray-4 active:bg-gray-5 h-4 border-b border-gray-7 transition-all">
+    <div
+      className={cn(
+        'relative bg-gray-3 hover:bg-gray-4 active:bg-gray-5 border-b border-gray-7 transition-all duration-700',
+        'h-12 md:h-4',
+        isExpanded && 'h-8',
+        !isExpanded && '-mb-px'
+      )}
+    >
       <button
-        className="absolute inset-0 cursor-pointer flex flex-row gap-1 overflow-hidden"
+        className={cn(
+          'absolute inset-0 cursor-pointer flex flex-row gap-3 md:gap-1 overflow-hidden transition-all duration-700',
+          isExpanded && 'gap-2'
+        )}
         onClick={() => setIsExpanded(!isExpanded)}
       >
         {Array.from({ length: 21 }, (_, index) => (
