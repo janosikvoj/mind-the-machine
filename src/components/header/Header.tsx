@@ -20,7 +20,7 @@ const variants = {
 };
 
 const Header = () => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <headerExpandedContext.Provider
@@ -28,7 +28,7 @@ const Header = () => {
     >
       <motion.header
         className={cn(
-          'bg-gray-2 group/header flex flex-col border-b border-gray-7 max-w-full overflow-hidden'
+          'bg-gray-2 group/header flex flex-col border-b border-gray-7 max-w-full overflow-hidden z-10'
         )}
         variants={variants}
         animate={isExpanded ? 'expanded' : 'collapsed'}

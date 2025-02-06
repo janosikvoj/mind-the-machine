@@ -44,14 +44,24 @@ const DevelopmentsSection = () => {
             return (
               <li
                 key={title + index}
-                className="p-6 flex flex-col gap-32 justify-between bg-blue-2"
+                className="p-6 flex flex-col gap-8 sm:gap-16 md:gap-32 justify-between bg-blue-2"
               >
                 <hgroup>
-                  {category && (
-                    <p className="mb-3 bg-gray-3 text-blue-11 px-1.5 pl-3 w-fit border-l-2 border-blue-9 text-sm uppercase tracking-wide font-medium">
-                      {category}
-                    </p>
-                  )}
+                  <div className="flex flex-row justify-between gap-3">
+                    {category && (
+                      <p className="mb-3 bg-gray-3 text-blue-11 px-1.5 pl-3 w-fit border-l-2 border-blue-9 text-sm uppercase tracking-wide font-medium">
+                        {category}
+                      </p>
+                    )}
+                    {title && (
+                      <small className="text-gray-9">
+                        <span className="text-gray-12 font-semibold pr-0.5">
+                          {index + 1}
+                        </span>
+                        /{modifiedKeyDevelopmentsSection.length}
+                      </small>
+                    )}
+                  </div>
                   <h3 className="text-2xl font-semibold">{title}</h3>
                   {year && <p className="text-lg">{year}</p>}
                 </hgroup>

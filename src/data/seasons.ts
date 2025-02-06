@@ -892,3 +892,7 @@ export const seasonsData = {
     return null;
   },
 };
+
+export const seasonsColors = seasons.map((season) => {
+  return season.tailwindBgColorClasses;
+});

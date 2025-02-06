@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import Header from '@/components/header/Header';
 import Footer from '@/components/Footer';
+import InitialPageLoadAnimation from '@/components/ui/InitialPageLoadAnimation';
 
 const interTight = Inter_Tight({
   variable: '--font-inter-tight',
@@ -30,9 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${interTight.variable} ${spacerR.variable}`}>
-        <Header />
-        {children}
-        <Footer />
+        <InitialPageLoadAnimation>
+          <Header />
+          {children}
+          <Footer />
+        </InitialPageLoadAnimation>
       </body>
     </html>
   );

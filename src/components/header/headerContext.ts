@@ -6,6 +6,6 @@ interface HeaderContextType {
 }
 
 export const headerExpandedContext = createContext<HeaderContextType>({
-  isExpanded: true,
+  isExpanded: false,
   setIsExpanded: () => {},
 });

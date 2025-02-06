@@ -15,7 +15,7 @@ const SlidingImgsSection = () => {
   const width = useTransform(scrollYProgress, [0, 1], ['33%', '66%']);
 
   return (
-    <section className="border-b border-gray-7 bg-blue-3">
+    <section className="relative border-b border-gray-7 bg-blue-3">
       <div ref={ref} className="relative h-[50vw] flex flex-row">
         <motion.div
           style={{ width: width }}
@@ -27,6 +27,7 @@ const SlidingImgsSection = () => {
             className="object-cover"
             src={leftImg.src}
             alt={leftImg.alt}
+            sizes="75vw"
           />
         </motion.div>
         <div className="grow h-full relative">
@@ -35,6 +36,7 @@ const SlidingImgsSection = () => {
             className="object-cover"
             src={rightImg.src}
             alt={rightImg.alt}
+            sizes="75vw"
           />
         </div>
       </div>

@@ -37,13 +37,14 @@ const ApplicationItem: React.FC<ApplicationItemProps> = ({
           <div className="relative overflow-hidden" ref={scrollRef}>
             <motion.div
               style={{ scale: scale }}
-              className="h-[20vw] min-h-[33vh]"
+              className="h-[20vw] min-h-[33vh] relative"
             >
               <Image
                 className="bg-gray-9 object-cover"
                 fill
                 src={image.src}
                 alt={image.alt}
+                sizes="(max-width: 640x) 71.4vw, 100vw"
               />
             </motion.div>
           </div>

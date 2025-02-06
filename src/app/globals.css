@@ -8,7 +8,7 @@
 
 @layer base {
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth relative;
   }
   body {
     @apply antialiased bg-gray-2 font-sans text-gray-12 selection:bg-blue-5 text-pretty;

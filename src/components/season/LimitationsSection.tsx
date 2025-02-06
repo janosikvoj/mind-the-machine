@@ -1,3 +1,4 @@
+'use client';
 import React, { useContext, useState } from 'react';
 import { seasonContext } from './seasonContext';
 import { LimitationType } from '@/data/seasons';
@@ -9,10 +10,9 @@ interface LimitationsAccordionItemProps {
   limitation: LimitationType;
   index: number;
 }
-const LimitationsAccordionItem: React.FC<LimitationsAccordionItemProps> = ({
-  limitation,
-  index,
-}) => {
+export const LimitationsAccordionItem: React.FC<
+  LimitationsAccordionItemProps
+> = ({ limitation, index }) => {
   const { title, description } = limitation;
   const [isOpen, setIsOpen] = useState(index === 0 ? true : false);
 
