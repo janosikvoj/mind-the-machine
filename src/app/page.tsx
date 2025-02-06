@@ -1,5 +1,6 @@
 import { LimitationsAccordionItem } from '@/components/season/LimitationsSection';
 import AnchoredHGroup from '@/components/ui/AnchoredHGroup';
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const questionsSection = [
   {
@@ -62,7 +63,7 @@ export default function Home() {
           <path d="M0 64L64 0" vectorEffect="non-scaling-stroke" />
         </svg>
       </section>
-      <section className="border-b border-gray-7">
+      <AnimatedSection className="border-b border-gray-7">
         <AnchoredHGroup className="text-gray-11">
           Questions & Answers
         </AnchoredHGroup>
@@ -78,7 +79,7 @@ export default function Home() {
             <div className="col-start-2 col-span-5 border-gray-7 border-x h-24" />
           </li>
         </ol>
-      </section>
+      </AnimatedSection>
     </main>
   );
 }

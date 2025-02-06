@@ -2,12 +2,13 @@ import { motion } from 'motion/react';
 import React, { useContext } from 'react';
 import { seasonContext } from './seasonContext';
 import DashedDivider from '../ui/DashedDivider';
+import AnimatedSection from '../ui/AnimatedSection';
 
 const BigNumberSection = () => {
   const { bigNumberSection } = useContext(seasonContext);
   if (bigNumberSection) {
     return (
-      <section className="pt-16 border-b border-gray-7">
+      <AnimatedSection className="pt-16 border-b border-gray-7">
         <p className="p-6 text-center">{bigNumberSection.numberDescription}</p>
         <div className="relative">
           <div className="h-[3.6rem] md:h-36 overflow-hidden flex justify-center items-start">
@@ -28,7 +29,7 @@ const BigNumberSection = () => {
           </div>
         </div>
         <DashedDivider className="border-t border-gray-9 stroke-gray-8" />
-      </section>
+      </AnimatedSection>
     );
   }
 };

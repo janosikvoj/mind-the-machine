@@ -3,6 +3,7 @@ import { seasonContext } from '../seasonContext';
 import ApplicationItem from './ApplicationItem';
 import { useRerenderOnResize } from '@/hooks/useRerenderOnResize';
 import AnchoredHGroup from '@/components/ui/AnchoredHGroup';
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const ApplicationsSection = () => {
   useRerenderOnResize();
@@ -26,7 +27,7 @@ const ApplicationsSection = () => {
 
   if (applicationsSection)
     return (
-      <section className="relative pt-24 border-b border-gray-7 bg-gray-3">
+      <AnimatedSection className="relative pt-24 border-b border-gray-7 bg-gray-3">
         <AnchoredHGroup ref={hGroupRef} className="px-6 py-8 sticky top-0 z-10">
           Real World Applications
         </AnchoredHGroup>
@@ -41,7 +42,7 @@ const ApplicationsSection = () => {
               />
             ))}
         </ul>
-      </section>
+      </AnimatedSection>
     );
 };
 

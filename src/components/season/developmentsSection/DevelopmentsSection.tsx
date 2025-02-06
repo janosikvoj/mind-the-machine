@@ -3,6 +3,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { seasonContext } from '../seasonContext';
 import AnchoredHGroup from '@/components/ui/AnchoredHGroup';
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const DevelopmentsSection = () => {
   const { keyDevelopmentsSection } = useContext(seasonContext);
@@ -32,7 +33,7 @@ const DevelopmentsSection = () => {
   }
 
   return (
-    <section className="border-b border-gray-7 bg-blue-2">
+    <AnimatedSection className="border-b border-gray-7 bg-blue-2">
       <AnchoredHGroup className="text-blue-11">Key Developments</AnchoredHGroup>
 
       <div className="border-t border-gray-7">
@@ -71,7 +72,7 @@ const DevelopmentsSection = () => {
           })}
         </ul>
       </div>
-    </section>
+    </AnimatedSection>
   );
 };
 

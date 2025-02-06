@@ -17,7 +17,7 @@ interface SeasonProps {
 const Season: React.FC<SeasonProps> = ({ season }) => {
   return (
     <seasonContext.Provider value={season}>
-      <main>
+      <main className=" overflow-x-hidden">
         <IntroSection />
         {season.slidingImgsSection && <SlidingImgsSection />}
         {season.keyDevelopmentsSection && <DevelopmentsSection />}

@@ -5,6 +5,7 @@ import { LimitationType } from '@/data/seasons';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'motion/react';
 import AnchoredHGroup from '../ui/AnchoredHGroup';
+import AnimatedSection from '../ui/AnimatedSection';
 
 interface LimitationsAccordionItemProps {
   limitation: LimitationType;
@@ -103,7 +104,7 @@ const LimitationsSection = () => {
 
   if (limitationsSection)
     return (
-      <section className="border-b border-gray-7">
+      <AnimatedSection className="border-b border-gray-7">
         <AnchoredHGroup className="text-gray-11">Limitations</AnchoredHGroup>
         <ol>
           {limitationsSection.map((limitation, index) => (
@@ -117,7 +118,7 @@ const LimitationsSection = () => {
             <div className="col-start-2 col-span-5 border-gray-7 border-x h-24" />
           </li>
         </ol>
-      </section>
+      </AnimatedSection>
     );
 };
 
