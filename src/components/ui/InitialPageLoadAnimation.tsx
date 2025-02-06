@@ -24,7 +24,7 @@ const InitialPageLoadAnimation: React.FC<InitialPageLoadAnimationProps> = ({
   }, []);
   return (
     <div className="relative">
-      <div className="pointer-events-none fixed top-0 left-0 w-full h-full z-[9999]">
+      <div className="fixed top-0 left-0 w-full h-full z-[9999] pointer-events-none">
         <AnimatePresence>
           {isLoading && (
             <>

@@ -23,7 +23,7 @@ const questionsSection = [
 export default function Home() {
   return (
     <main>
-      <section className=" p-6 pb-16 md:grid grid-cols-7 border-b border-gray-7 bg-gray-3">
+      <section className="p-6 pb-16 md:grid grid-cols-7 border-b border-gray-7 bg-gray-3 motion-bg-in-gray-3/0 motion-delay-1500">
         <svg
           className="hidden md:block col-span-2 m-auto h-1/3 w-1/2 stroke-2 stroke-blue-9 -scale-y-100"
           width={64}

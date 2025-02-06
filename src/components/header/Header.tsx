@@ -28,7 +28,7 @@ const Header = () => {
     >
       <motion.header
         className={cn(
-          'bg-gray-2 group/header flex flex-col border-b border-gray-7 max-w-full overflow-hidden z-10'
+          'bg-gray-2 group/header flex flex-col border-b border-gray-7 max-w-full overflow-hidden z-10 pointer-events-auto'
         )}
         variants={variants}
         animate={isExpanded ? 'expanded' : 'collapsed'}
